@@ -23,7 +23,7 @@ function GetContinents() {
 
     const children = data.continents.map((item) => (
         <tr key={item.code}>
-            <td>{item.code}</td>
+            <td><a href="#">{item.code}</a></td>
             <td>{item.name}.</td>
             <td>{item.countries.length}</td>
         </tr>
