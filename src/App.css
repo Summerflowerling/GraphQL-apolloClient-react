@@ -2,9 +2,14 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#continent{
+  width: 80%;
+}
+
+
+#continent td, #continent th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

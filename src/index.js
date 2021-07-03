@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import GetCountry from './GetCountry';
+
 import reportWebVitals from './reportWebVitals';
 import {
   ApolloClient,
@@ -25,7 +25,6 @@ ReactDOM.render(
   <ApolloProvider client={client}>
     <React.StrictMode>
       <App />
-      <GetCountry />
     </React.StrictMode>
   </ApolloProvider>
   ,
