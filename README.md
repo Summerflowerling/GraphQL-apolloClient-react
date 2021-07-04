@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Fetch data from graphQL API using Apollo Client (React) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses graphQL API (https://countries.trevorblades.com/) and React Router to display corresponding continent information.
 
 ## Available Scripts
 
