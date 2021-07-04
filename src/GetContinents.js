@@ -1,34 +1,38 @@
 import { useQuery, gql } from "@apollo/client";
 
-const GET_CONTINENTS = gql`
+//Define query
+export const GET_CONTINENTS = gql`
 query { 
     continents{
         code
         name
           countries{
+          code
           name
-        }
-        
-      }
-  }
-     
+          native
+          capital
+          currency
+          languages{
+                name
+                }
+          }       
+    }
+  }  
 `;
 
 function GetContinents() {
 
     const { loading, error, data } = useQuery(GET_CONTINENTS);
-
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error </p>;
 
     const children = data.continents.map((item) => (
         <tr key={item.code}>
             <td><a href="#">{item.code}</a></td>
-            <td>{item.name}.</td>
+            <td>{item.name}</td>
             <td>{item.countries.length}</td>
         </tr>
     ))
-
     return (
         <div>
             <table id="continent">
@@ -39,9 +43,7 @@ function GetContinents() {
                     <th>Name of Countries</th>
                 </tr>
                 {children}
-
             </table>
-
         </div>
 
     )
