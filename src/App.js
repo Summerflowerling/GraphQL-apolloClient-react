@@ -7,7 +7,7 @@ import GetEurope from './continents/Europe';
 import GetNorthAmerica from './continents/NorthAmerica';
 import GetOceania from './continents/Oceania';
 import GetSouthAmerica from './continents/SouthAmerica';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="parent-container">
         <h1>Hello World</h1>
-        <p>Click the name and see the countries infomation inside the continent</p>
+        <p>Choose a contient and see the countries infomation</p>
         <GetContinents />
         <Route path="/Africa" component={GetAfrica} />
         <Route path="/Antarctica" component={GetAntarctica} />

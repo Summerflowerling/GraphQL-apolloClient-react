@@ -11,32 +11,35 @@ function GetAsia() {
 
         const lan = item.languages.map(item => (item.name))
         return (
-            <tr key={item.code}>
-                <td>{item.code}</td>
-                <td>{item.name}</td>
-                <td>{item.native}</td>
-                <td>{item.capital}</td>
-                <td>{item.currency}</td>
-                <td>{lan.length === 1 ? lan : lan + ""}</td>
-            </tr>
+            <tbody key={item.code}>
+                <tr>
+                    <td>{item.code}</td>
+                    <td>{item.name}</td>
+                    <td>{item.native}</td>
+                    <td>{item.capital}</td>
+                    <td>{item.currency}</td>
+                    <td>{lan.length === 1 ? lan : lan + ""}</td>
+                </tr>
+            </tbody>
         )
     }
     )
-    console.log("country", country)
 
     return (
         <div >
             <h1>Asia</h1>
             <table id="asia" className="table-width">
                 <colgroup span="6"></colgroup>
-                <tr>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Native</th>
-                    <th>Capital</th>
-                    <th>Currency</th>
-                    <th>Languages</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Native</th>
+                        <th>Capital</th>
+                        <th>Currency</th>
+                        <th>Languages</th>
+                    </tr>
+                </thead>
                 {country}
             </table>
         </div>
