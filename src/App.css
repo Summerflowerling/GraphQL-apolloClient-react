@@ -2,14 +2,22 @@
   text-align: center;
 }
 
+.parent-container{
+  width:80%;
+  margin:5em 10em;
+  text-align: center;
+}
+
 .table-width{
-  width: 80%;
+  width: 100%;
 }
 
 table, th, td  {
   border: 1px solid #ddd;
   padding: 8px;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

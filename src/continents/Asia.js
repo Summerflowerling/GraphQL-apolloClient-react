@@ -1,13 +1,14 @@
 import { useQuery } from "@apollo/client";
 import { GET_CONTINENTS } from "../GetContinents";
 
-function GetAfrica() {
+function GetAsia() {
     const { loading, error, data } = useQuery(GET_CONTINENTS);
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error </p>;
 
     const children = data.continents.map(item => (item))
-    const country = children[0].countries.map(item => {
+    const country = children[2].countries.map(item => {
+
         const lan = item.languages.map(item => (item.name))
         return (
             <tr key={item.code}>
@@ -21,11 +22,12 @@ function GetAfrica() {
         )
     }
     )
+    console.log("country", country)
 
     return (
-        <div className="flex-box" >
-            <h1>Africa</h1>
-            <table id="africa" className="table-width">
+        <div >
+            <h1>Asia</h1>
+            <table id="asia" className="table-width">
                 <colgroup span="6"></colgroup>
                 <tr>
                     <th>Code</th>
@@ -41,4 +43,4 @@ function GetAfrica() {
     );
 }
 
-export default GetAfrica;
+export default GetAsia;
