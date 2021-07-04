@@ -23,8 +23,8 @@ function GetAfrica() {
     )
 
     return (
-        <div>
-            <table id="africa">
+        <div >
+            <table id="africa" className="table-width">
                 <colgroup span="6"></colgroup>
                 <tr>
                     <th>Code</th>

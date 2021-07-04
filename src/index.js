@@ -12,7 +12,10 @@ import {
 
 const client = new ApolloClient({
   uri: 'https://countries.trevorblades.com/',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
+  fetchOptions: {
+    mode: 'no-cors',
+  },
 });
 
 

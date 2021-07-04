@@ -35,7 +35,7 @@ function GetContinents() {
     ))
     return (
         <div>
-            <table id="continent">
+            <table id="continent" className="table-width">
                 <colgroup span="3"></colgroup>
                 <tr>
                     <th>Code</th>

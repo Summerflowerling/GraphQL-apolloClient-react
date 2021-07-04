@@ -2,12 +2,11 @@
   text-align: center;
 }
 
-#continent{
+.table-width{
   width: 80%;
 }
 
-
-#continent td, #continent th {
+table, th, td  {
   border: 1px solid #ddd;
   padding: 8px;
 }
